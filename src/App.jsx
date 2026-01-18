@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Menu, X, Instagram, Facebook, Twitter, MapPin, Phone, Mail, Clock, Star, Scissors, Sparkles, Heart, ChevronLeft, ChevronRight, ArrowRight, Feather, Palette, Gem, Droplets, Gift, Calendar, Quote, MessageCircle, ShieldCheck, Leaf, Award, ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { Menu, X, MapPin, Phone, Mail, Clock, Star, Scissors, Sparkles, Heart, ChevronLeft, ChevronRight, ArrowRight, Feather, Palette, Gem, Droplets, Gift, Calendar, Quote, MessageCircle, ShieldCheck, Leaf, Award, ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
 
 const App = () => {
   const [currentPage, setCurrentPage] = useState('home');
@@ -113,9 +113,10 @@ const App = () => {
               Est. 2024.
             </p>
             <div className="flex justify-center md:justify-start space-x-4">
-              <SocialIcon Icon={Instagram} />
+              {/* <SocialIcon Icon={Instagram} />
               <SocialIcon Icon={Facebook} />
-              <SocialIcon Icon={Twitter} />
+              <SocialIcon Icon={Twitter} /> */}
+
             </div>
           </div>
           <div>
@@ -1219,7 +1220,7 @@ const ServiceItem = ({ title, price, description }) => (
   </div>
 );
 
-const SocialIcon = ({ Icon }) => (
+const SocialIcon = () => (
   <a href="#" className="w-8 h-8 flex items-center justify-center rounded-full bg-stone-800 text-stone-400 hover:bg-stone-700 hover:text-white transition-all">
     <Icon size={16} />
   </a>
